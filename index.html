@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery.mobile-1.4.2.min.js"></script>
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {}
+		function doClose() {
+			navigator.notification.confirm(
+				'Keluar dari Aplikasi ?',
+				exitApp,
+				'Sepak Takraw',
+				'Ok,Batal'
+			);
+		}
+
+		function exitApp(buttonIndex) {
+			if (buttonIndex == 1) {
+				navigator.app.exitApp();
+			} else {
+				window.close();
+			}
+		}
+	</script>
+
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+	<div data-role="page" id="home" class="jqm-demos jqm-home" style="background-image:url('images/bg.png'); background-attachment: fixed; background-size: cover;">
+		<div data-role="header">
+			<p style="white-space: normal;color:#fff;font-size:14px;font-weight:50px;margin: 0 5em 0 5em;text-align: center;" role="heading" class="ui-title">Sepak Takraw</p>
+			<a data-icon="search" style="display:none" href="#nav-panel" data-ajax="false" data-iconpos="notext">Search</a>
+			<a data-icon="info" href="#popupDialog" data-rel="popup" data-transition="pop" data-iconpos="notext">About</a>
+		</div>
+		<div role="main" data-theme="c" class="ui-content jqm-content" align="center">
+			<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"  href="#nav-panel" data-ajax="false" >Mulai</a>
+		</div>
+		<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+			<div data-role="header" data-theme="a">
+				<h1>Tentang</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<h3 class="ui-title">Sepak Takraw</h3>
+				<p>Informasi seputar olahraga sepak takraw</p>
+				<a href="#"  class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-rel="back">Cancel</a>
+
+			</div>
+		</div>
+
+		<div data-role="panel" data-position-fixed="true" data-display="reveal" id="nav-panel">
+			<ul data-role="listview" data-inset="true">
+				<li> <a href="score.html" data-ajax="false"  data-transition="pop"><img src="images/icon-1.png"class="ui-li-icon">Perhitungan Skor</a></li>
+				<li> <a href="score_history.html" data-ajax="false"  data-transition="pop"><img src="images/icon-1.png"class="ui-li-icon">Riwayat Skor</a></li>
+				<li> <a href="rules.html" data-ajax="false"  data-transition="pop"><img src="images/icon-1.png"class="ui-li-icon">Peraturan</a></li>
+				<li> <a href="history.html" data-ajax="false"  data-transition="pop"><img src="images/icon-1.png"class="ui-li-icon">Sejarah</a></li>
+				<li> <a href="#" data-ajax="false" onclick="doClose()"  data-transition="pop"><img src="images/icon-1.png"class="ui-li-icon">Keluar</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>

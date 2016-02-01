@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery.mobile-1.4.2.min.js"></script>
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script charset="utf-8" src="js/jstorage.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			document.getElementById("point1").value = $.jStorage.get("point1_1");
+			document.getElementById("point2").value = $.jStorage.get("point2_1");
+			document.getElementById("nama_tim1").value = $.jStorage.get("nama_tim1");
+			document.getElementById("nama_tim2").value = $.jStorage.get("nama_tim2");
+			$("#sesi").change(function() {
+				if ($("#sesi")[0].value == 1) {
+					document.getElementById("point1").value = $.jStorage.get("point1_1");
+					document.getElementById("point2").value = $.jStorage.get("point2_1");
+					if ($.jStorage.get("point1_1") == null) {
+						$.jStorage.set("point1_1", 0);
+						document.getElementById("point1").value = 0;
+					}
+					if ($.jStorage.get("point2_1") == null) {
+						$.jStorage.set("point2_1", 0);
+						document.getElementById("point2").value = 0;
+					}
+				}
+
+				if ($("#sesi")[0].value == 2) {
+					document.getElementById("point1").value = $.jStorage.get("point1_2");
+					document.getElementById("point2").value = $.jStorage.get("point2_2");
+					if ($.jStorage.get("point1_2") == null) {
+						$.jStorage.set("point1_2", 0);
+						document.getElementById("point1").value = 0;
+					}
+					if ($.jStorage.get("point2_2") == null) {
+						$.jStorage.set("point2_2", 0);
+						document.getElementById("point2").value = 0;
+					}
+				}
+
+				if ($("#sesi")[0].value == 3) {
+					document.getElementById("point1").value = $.jStorage.get("point1_3");
+					document.getElementById("point2").value = $.jStorage.get("point2_3");
+					if ($.jStorage.get("point1_3") == null) {
+						$.jStorage.set("point1_3", 0);
+						document.getElementById("point1").value = 0;
+					}
+					if ($.jStorage.get("point2_3") == null) {
+						$.jStorage.set("point2_3", 0);
+						document.getElementById("point2").value = 0;
+					}
+				}
+
+
+			});
+
+			$("#point1").change(function() {
+				$.jStorage.set("point1" + "_" + $("#sesi")[0].value, $("#point1")[0].value);
+			});
+
+			$("#point2").change(function() {
+				$.jStorage.set("point2" + "_" + $("#sesi")[0].value, $("#point2")[0].value);
+			});
+
+			$("#nama_tim1").blur(function() {
+				$.jStorage.set("nama_tim1", $("#nama_tim1")[0].value);
+			});
+
+			$("#nama_tim2").blur(function() {
+				$.jStorage.set("nama_tim2", $("#nama_tim2")[0].value);
+			});
+
+
+			$("#clear").click(function() {
+				$.jStorage.set("point1_1", 0);
+				$.jStorage.set("point1_2", 0);
+				$.jStorage.set("point1_3", 0);
+				$.jStorage.set("point2_1", 0);
+				$.jStorage.set("point2_2", 0);
+				$.jStorage.set("point2_3", 0);
+				$.jStorage.set("nama_tim1", "");
+				$.jStorage.set("nama_tim2", "");
+				location.reload();
+			});
+
+
+
+
+
+			$("#save").click(function() {
+				var d = new Date().getTime();
+				var save = '{"point1_1":' + $.jStorage.get("point1_1") + ',"point1_2":' + $.jStorage.get("point1_2") + ',"point1_3":' + $.jStorage.get("point1_3") + ',"point2_1": ' + $.jStorage.get("point2_1") + ',"point2_2": ' + $.jStorage.get("point2_2") +
+				  ',"point2_3": ' + $.jStorage.get("point2_3") + ',"nama_tim1":' +  '"'+ $.jStorage.get("nama_tim1")+ '"'+ ',"nama_tim2": ' + '"'+ $.jStorage.get("nama_tim2") + '"' + '}';
+
+				$.jStorage.set(d, save);
+
+				document.getElementById("info").innerHTML = "berhasil disimpan";
+				setTimeout(function() {
+					document.getElementById("info").innerHTML = "";
+				}, 2000);
+			});
+
+
+
+
+		});
+
+	</script>
+
+	<script type="text/javascript" charset="utf-8">
+		// Wait for Cordova to load
+		//
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+		// Cordova is ready
+		//
+		function onDeviceReady() {}
+	</script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/jqm-spinbox.js"></script>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+	<div data-role="page" id="home" class="jqm-demos jqm-home" style="background-image:url('images/bg.png'); background-attachment: fixed; background-size: cover;">
+		<div data-role="header">
+			<p style="white-space: normal;color:#fff;font-size:14px;font-weight:50px;margin: 0 5em 0 5em;text-align: center;" role="heading" class="ui-title">Sepak Takraw</p>
+			<a data-icon="refresh" href="#" id="clear" data-ajax="false" data-iconpos="notext">Search</a>
+			<a data-icon="info" href="#popupDialog" data-rel="popup" data-transition="pop" data-iconpos="notext">About</a>
+		</div>
+		<div role="main" data-theme="c" class="ui-content " align="center">
+			<p>Sesi</p>
+			<input type="text" data-role="spinbox" name="spin" id="sesi" data-options='{"type":"horizontal"}' value="1" min="1" max="3" />
+			<div class="ui-grid-a ">
+				<div class="ui-block-a">
+					<div class="ui-field-contain" style="margin-right:2px;margin-bottom:2px;">
+						<label for="field1">Nama Team 1</label>
+						<input type="text" name="field1" data-mini="true" id="nama_tim1" />
+					</div>
+					<div class="ui-field-contain" style="margin-left:2px;margin-bottom:2px;">
+						<label for="spin2">Point</label>
+						<input type="text" data-role="spinbox" name="spin" id="point1" data-options='{"type":"vertical"}' value="0" min="0" max="100" />
+					</div>
+
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-field-contain" style="margin-left:2px;margin-bottom:2px;">
+						<label for="field1">Nama Team 2</label>
+						<input type="text" name="field1" data-mini="true" id="nama_tim2" />
+					</div>
+					<div class="ui-field-contain" style="margin-left:2px;margin-bottom:2px;">
+						<label for="spin2">Point</label>
+						<input type="text" data-role="spinbox" name="spin" id="point2" data-options='{"type":"vertical"}' value="0" min="0" max="100" />
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+			<div data-role="header" data-theme="a">
+				<h1>Simpan</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<p>Simpan Hasil Pertandingan ?</p>
+				<a href="#" id="save" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Simpan</a>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a><br>
+				<p style="font-size:10px" id="info"></p>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

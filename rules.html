@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery.mobile-1.4.2.min.js"></script>
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script charset="utf-8" src="js/jstorage.js"></script>
+
+
+	<script type="text/javascript" charset="utf-8">
+		// Wait for Cordova to load
+		//
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+		// Cordova is ready
+		//
+		function onDeviceReady() {}
+	</script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/jqm-spinbox.js"></script>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+	<div data-role="page" id="home" class="jqm-demos jqm-home" style="background-image:url('images/bg.png'); background-attachment: fixed; background-size: cover;">
+		<div data-role="header">
+			<p style="white-space: normal;color:#fff;font-size:14px;font-weight:50px;margin: 0 5em 0 5em;text-align: center;" role="heading" class="ui-title">Sepak Takraw</p>
+		</div>
+		<div role="main"  class="ui-content">
+			<ol>
+	  <li>LAPANGAN</li>
+	</ol>
+
+	<ul>
+	  <li>Lapangan sepak takraw seukuran dengan lapangan badminton; 13,40m x 6,10m</li>
+
+	  <li>Takraw dapat&nbsp;dimainkan di dalam gedung dan juga dapat di luar gedung (apabila dimainkan didalam gedung maka tinggi loteng minimal 8 m dari lantai)</li>
+
+	  <li>Keempat sisi lapangan ditandai dengan/cat atau lakban yang lebarnya 4 cm, diukur dari pinggir sebelah luar
+	    <ul>
+	      <li><strong>Area bebas&nbsp;</strong>: adalah minimal 3 meter dari garis luar lapangan harus bebas rintangan. (lihat gambar)</li>
+
+	      <li><strong><em>Center Line</em></strong>: adalah garis tengah dengan lebar 2 cm</li>
+
+	      <li><strong><em>Quarter Circle</em></strong>:&nbsp;adalah garis seperempat lingkaran dipojok garis tengah dengan radius 90 cm diukur dari garis sebelah dalam sbb:</li>
+
+	      <li><strong><em>The Service Circle</em></strong>: adalah lingkaran servis dengan radius 30cm berada ditengah lapangan, jarak dari garis belakang 2,45 M dan jarak dari titik tengah garis lingkaran kegaris tengah (<em>centre line</em>) 4,25 m, jarak titik tengah lingkaran adalah 3,05 meter dari kiri dan kanan garis pinggir lapangan.</li>
+	    </ul>
+	  </li>
+	</ul>
+
+	<p>TINGGI TIANG (SAMA DENGAN NET)</p>
+
+	<p>1. Putra</p>
+
+	<p>Tinggi net 1,55 meter dipinggir dan minimal 1,52 meter ditengah</p>
+
+	<p>2. Putri</p>
+
+	<p>Tinggi net 1,45 meter dipinggir dan minimal 1,42 meter ditengah</p>
+
+	<p>3. Kedudukan tiang 30 cm di luar garis pinggir</p>
+
+	<ol>
+	  <li>NET :
+	    <ul>
+	      <li>1 Net terbuat dari tali/benang kuat atau nilon, dimana tiap lubangnya lebar 6-8 cm</li>
+
+	      <li>2 Lebar net 70 cm dan panjang 6,10 meter</li>
+	    </ul>
+	  </li>
+
+	  <li>BOLA TAKRAW
+	    <ul>
+	      <li>1 Terbuat dari plastik (<em>sytetic fibre</em>) dimana awalnya adalah terbuat dari rotan</li>
+
+	      <li>2 Lingkaran 42-44 cm (putra) dan 43-45 cm (putri).</li>
+
+	      <li>3 Berat adalah 170-189 gr (putra) dan 150-160 gr (putri)</li>
+	    </ul>
+	  </li>
+
+	  <li>PEMAIN
+	    <ul>
+	      <li>1 Permainan ini&nbsp;dimainkan oleh dua “regu” masing-masing regu terdiri dari 3 orang pemain, dan setiap regu dilengkapi dengan 1 (satu) pemain cadangan.</li>
+
+	      <li>2 Satu dari 3 pemain di posisi belakang disebut<em>Back</em>atau “Tekong” (yang melakukan Sepakmula)</li>
+
+	      <li>3 Dua pemain berada didepan; yang sebelah kiri kita sebut “Apit Kiri” sebelah kanan disebut “Apit Kanan”</li>
+	    </ul>
+	  </li>
+
+	  <li>PAKAIAN PEMAIN
+	    <ul>
+	      <li>1 Semua pemain putra diharuskan memakai pakaian kaos seragam yang berlengan<em>T-shirt</em>dan bersepatu karet, dan untuk putri diharukan memakai kaos bundar leher serta celana sebatas lutu. Tidak diperkenankan pemain memakai pakaian yang membahayakan lawan selama pertandingan.</li>
+	    </ul>
+	  </li>
+	</ol>
+
+	<p>Catatan: Kecuali dalam kondisi cuaca dingin pemain diperkenankan memakai track suits.</p>
+
+	<ul>
+	  <li>2 Pakaian yang pantas untuk seorang pemain adalah yang menutupi badan sepeti baju kaos/<em>T-shirt</em>(dipakai rapi/dimasukkan)</li>
+
+	  <li>3 Pakaian pemain yang membantu kecepatan bola tidak diperbolehkan</li>
+
+	  <li>4 Kapten regu harus memakai band tangan disebelah kiri</li>
+
+	  <li>5 Semua pemain diharuskan memakai pakaian dengan nomor punggung yang tetap selama Tournament</li>
+	</ul>
+
+	<ol start="7">
+	  <li><em>SUBTITUTION</em>
+	    <ul>
+	      <li>1 Setiap “Regu” hanya diperbolehkan sekali penggantian pemain dalam satu pertandingan. (tidak diperkenankan penggantian pemain yang sama dalam 1 Tim pada Regu lain).</li>
+
+	      <li>2 Penggantian pemain diperbolehkan setiap saat ketika bola mati, melalui Tim Manager/Pelatih yang disetujui oleh<em>Official Referee</em>.</li>
+
+	      <li>3 Setiap Regu dapat menominasikan maximum 2 orang cadangan tetapi hanya melakukan penggantian 1 kali dalam pertandingan yang berlangsung tersebut.</li>
+
+	      <li>4 Pemain yang mendapat “Kartu Merah” dan dikeluarkan oleh wasit, dapat diganti dengan ketentuan belum ada penggantian pemain sebelumnya</li>
+
+	      <li>5 Suatu “REGU” apabila yang bermain kurang dari 3 (tiga) orang pemain, maka tidak boleh melanjutkan permainan dan regu tersebut dinyatakan kalah.</li>
+	    </ul>
+	  </li>
+
+	  <li><em>OFFICIAL</em>(PETUGAS PERTANDINGAN)</li>
+	</ol>
+
+	<p>Suatu pertandingan resmi harus dipimpin&nbsp;<em>Technical Official</em>&nbsp;sebagai berikut:</p>
+
+	<ul>
+	  <li>2 (dua)<em>Technical Delegate</em></li>
+
+	  <li>6 (Enam) juri (Dewan hakim)</li>
+
+	  <li>1 (satu)<em>Official Referee</em></li>
+
+	  <li>2 (dua) wasit (wasit utama dan wasit dua)</li>
+
+	  <li>6 (enam) penjaga garis/linesman’s (4 disisi lapangan dan 2 digaris belakang)</li>
+	</ul>
+
+	<ol start="9">
+	  <li>UNDIAN &amp; PEMANASAN PEMAIN
+	    <ul>
+	      <li>1 Sebelum permainan dimulai, wasit (<em>official Referee</em>) akan melakukan undian dalam hal ini yang menang undian berhak memilih “sepakmula”atau”tempat”</li>
+
+	      <li>2 Regu yang menang undian akan pertama melakukan pemanasan selama 2 (dua) menit, dan hanya 5 (lima) orang saja yang diperkenankan berada dilapangan pada saat pemanasan serta hanya 2 (dua) bola yan dipakai Panitia</li>
+	    </ul>
+	  </li>
+	</ol>
+
+	<p>Catatan&nbsp;: Kombinasi dari 5 (lima) orang tersebut selama pemanasan diperbolehkan,sbb:</p>
+
+	<ul>
+	  <li>Pelatih/ass. Pelatih</li>
+
+	  <li>3 Pemain</li>
+	</ul>
+
+	<ol start="10">
+	  <li>POSISI PEMAIN PADA WAKTU<em>SERVIS</em>
+	    <ul>
+	      <li>1 Sebelum permainan dimulai, kedua regu harus berada di lapangan masing-masing dalam posisi siap bermain</li>
+
+	      <li>2 Dalam melakukan sepakmula,salah satu dari kaki tekong berada dalam lingkaran sevis, dan satu lagi diluar lingkaran untuk melakukan sepakmula</li>
+
+	      <li>3 Kedua pemain apit ketika dilakukan<em>servis</em>, harus berada dalam seperempat lingkaran</li>
+
+	      <li>4 Lawan atau Regu penerima servis bebas bergerak di dalam lapangan sendiri</li>
+	    </ul>
+	  </li>
+
+	  <li>PERMULAAN PERMAINAN &amp; SEPAK MULA
+	    <ul>
+	      <li>1 Regu yang memilih Sepakmula pada waktu undian akan memulai permainan pada set I. Pemenang set I akan memulai permainan pada set II</li>
+
+	      <li>2 Pelambung harus segera melambungkan bola begitu wasit menyebut posisi angka jika pemain mendahuluinnya maka lambungan bola harus diulang dan pemain tersebut mendapat peringatan dari wasit</li>
+
+	      <li>3 Bola harus disepak pada saat si pelambung melambungkan bola kepada “TEKONG” begitu bola berhasil disepak dengan baik semua pemain baru boleh bebas bergerak di lapangan sendiri</li>
+
+	      <li>4 Sepakmula dinyatakan sah jika bola telah melewati net, baik menyentuh ataupun tidak dan jatuh dilapangan lawan</li>
+	    </ul>
+	  </li>
+
+	  <li>KESALAH (BATAL):
+	    <ul>
+	      <li>1 Kesalahan pihak penyepakmula
+	        <ul>
+	          <li>1.1 Apit sebagai pelambung masih memainkan bola, melemparkan bola kepada teman sendiri, memantulkan, melemper dan menangkap lagi setelah wasit menyebut posisi angka.</li>
+
+	          <li>1.2 Apit mengangkat kaki, menginjak garis,menyentuh atau melewati bawah net ketika melakukan lambungan bola.</li>
+
+	          <li>1.3 Tekong melompat saat melakukan<em>servis</em>, kaki tumpuan tidak berada dalam lingkaran atau menginjak garis lingkaran<em>servis</em></li>
+
+	          <li>1.4 Tekong tidak menyepak bola yang dilambungkan kepadanya</li>
+
+	          <li>1.5 Bola menyentuh salah seorang pemain (teman sendiri) sebelum bola melewati net</li>
+
+	          <li>1.6 Bola jatuh diluar lapangan</li>
+
+	          <li>1.7 Bola tidak melewati net</li>
+
+	          <li>1.8 Pemain menggunakan tangan atau ke dua tangan bagian lengan untuk bantuan saat melakukan<em>servis</em>walaupun tangan tidak terus langsung pengenaan bola tapi menyentuh<em>objek</em>ketika melaksanakan<em>servis</em></li>
+	        </ul>
+	      </li>
+
+	      <li>2 Kesalahan dipihak penerima<em>servis</em>dan sepakmula
+	        <ul>
+	          <li>2.1 Berusaha mengalihkan perhatian lawan seperti; (isyarat tangan, menggeretak, berusaha keras dan membuat keributan).</li>
+	        </ul>
+	      </li>
+
+	      <li>3 Kesalahan pada kedua pihak
+	        <ul>
+	          <li>3.1 Ada pemain yang mengambil bola dilapangan lawan</li>
+
+	          <li>3.2 Menginjak dan melewati satu telapak kaki garis tengah (<em>centre line</em>)</li>
+
+	          <li>3.3 Ada pemain (perlengkapan sekalipun) melewati lapangan lawan, walaupun di atas/di bawah net kecuali pada saat “<em>The Follow through ball</em>”</li>
+
+	          <li>3.4 Mempermainkan bola lebih dari&nbsp;3 kali</li>
+
+	          <li>3.5 Bola mengenai tangan</li>
+
+	          <li>3.6 Menahan/menjepit bola diantara lengan dan badan antara dua kaki atau badan</li>
+
+	          <li>3.7 Ada bagian badan atau perlengkapan pemain seperti; sepatu, pengikat kepala dan lain-lain, menyentuh net tiang, atau kursi wasit atau jatuh di lapangan lawan. Batal juga diberikan kepada pemain yang menyentuh kursi wasit/<em>linesman</em>atau memegang pembatas sebelum menendang bola</li>
+
+	          <li>3.8 Bola mengenai loteng/atap atau dinding pembatas (objek lainnya)</li>
+
+	          <li>3.9 Ada pemain sengaja memperlambat permainan yang tidak perlu (peringatan)</li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </li>
+
+	  <li>SISTEM PERHITUNGAN ANGKA
+	    <ul>
+	      <li>1 Apabila penerima servis, atau yang melakukan sepakmula terjadi kesalahan otomatis akan peroleh angka sekaligus melakukan sepak mula lagi</li>
+
+	      <li>2 Angka kemenangan setiap set maximum 21 angka,. Kecuali pada saat posisi angka 20-20, pemenang akan ditentukan pada saat selisih 2 angka sampai batas akhir 25 point, ketika 20-20 wasit utama menyerukan batas angka 25 point.</li>
+
+	      <li>3 Memeberikan kesempatan istirahat 2 menit masing-masing pada akhir set pertama/kedua termasuk<em>Tie Break</em></li>
+
+	      <li>4 Apabila masing-masing regu memenangkan 1 set, maka permainan akan dilanjutkan dengan set “<em>Tie break</em>” dengan 15 point, kecuali pada posisi 14-14, pemenang ditentukan pada selisih 2 angka, sampai batas akhir angka 17</li>
+
+	      <li>5 Sebelum set<em>tie break</em>dimulai wasit II akan melakukan undian “Toss”. Regu yang menang undian toss akan melakukan sepak mula pada set<em>tie break</em>ini. Pada pertukaran tempat pada set<em>tie break</em>akan dilakukan apabila salah satu regu mencapai angka 8.</li>
+	    </ul>
+	  </li>
+
+	  <li><em>TIME OUT</em>
+	    <ul>
+	      <li>1 Setiap regu dapat meminta “<em>TIME OUT</em>” 1 menit setiap setkepada wasit melalui Tim<em>Manager</em>atau pelatih (termasuk set “<em>tie break</em>”),ketika bola mati. Selama time out hanya 5 orang yang diperbolehkan berada di garis belakang/<em>base line</em>. (3 pemain dan 2 pelatih)</li>
+	    </ul>
+	  </li>
+
+	  <li>PENGHENTIAN PERMAINAN SEMENTARA
+	    <ul>
+	      <li>1 Wasit yang sedang memimpin pertandingan dapat menghentikan permainan sementara yang disebabkan karena gangguan lapangan, gangguan keamanan, gangguan cuaca atau ada pemain cedera dengan waktu lebih dari 5 menit. Apabila lebih dari 5 menit pemain tidak dapat melanjutkan permainan maka penggantian pemain dapat dilakukan sepanjang belum ada penggantian sebelumnya</li>
+
+	      <li>2 Pemain yang cidera diizinkan 5 menit sebagai<em>injury time out</em>setelah 5 menit pemain tersebut tak dapat melanjutkan permainan, maka penggantian dapat dilakukan selama belum terjadi penggantian sebelumnya.</li>
+
+	      <li>3 Selama penghentian sementara, semua pemain tidak diperbolehkan meninggalkan lapangan untuk menerima minuman/makanan atau bantuan lainnya.</li>
+	    </ul>
+	  </li>
+
+	  <li><em>DICIPLINE</em>(TATA TERTIB)
+	    <ul>
+	      <li>1 Setiap pemain harus mematuhi peraturan permainan</li>
+
+	      <li>2 Selama permainan berlangsung, hanya kapten regu yang diperbolehkan berhubungan dengan wasit, kecualu atas kehendak wasit</li>
+	    </ul>
+	  </li>
+
+	  <li><em>PINALTY</em>(HUKUMAN)</li>
+	</ol>
+
+	<p>Pemain yang melanggar peraturan dibawah ini akan mendapat hukuman pernyataan dari wasit apabila:</p>
+
+	<ul>
+	  <li>1 Memeperhatikan sikap tidak sopan kepada, pamain lain atau penonton juga kepada wasit atas keputusan yang diambil</li>
+
+	  <li>2 Menampakkan sikap tidak bersahabat dan tidak sopan</li>
+
+	  <li>3 Menghubungi wasit yang bertugas secara kasar mengenai suatu keputusan yang diambil</li>
+
+	  <li>4 Meninggalkan lapangan permainan tanpa permisi kepada wasit yang memimpin pertandingan</li>
+
+	  <li>5 Memberikan bola kepada pihak lawan dengan menggunakan kaki atau melemparkannya dengan kasar</li>
+
+	  <li>6 Berkelakuan tidak sopan selama permainan</li>
+	</ul>
+
+	<ol start="18">
+	  <li>CATATAN: WASIT MENGGUNAKAN KARTU SEBAGAI BERIKUT:
+	    <ul>
+	      <li>1 Kartu Kuning&nbsp;– Peringatan</li>
+
+	      <li>2 Kartu Merah&nbsp;–Pengusiran</li>
+
+	      <li>3 Kartu Merah akan diberikan apabila:
+	        <ul>
+	          <li>3.1 Apabila pemain telah menerima kartu kuning pada pertandingan yang sama</li>
+
+	          <li>3.2 Sikap kasar (tidak sopan) seperti: memukul, menendang, meludah dll</li>
+
+	          <li>3.3 Menggunakan kata-kata kotor atau caci maki</li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </li>
+
+	  <li>CATATAN: pemain yang mendapat kartu merah, harus segera keluar lapangan sebagai ganjaran<em>indicipline</em>
+	    <ul>
+	      <li>1 Penggantian pemain diizinkan sesuai dengan peraturan butir (7.4)</li>
+
+	      <li>2 Pemain yang telah dikenai kartu merah tidak diizinkan bermain pada permainan berikutnya sampai dikeluarkan keputusan lain Dewan hakim</li>
+	    </ul>
+	  </li>
+
+	  <li>KELAKUAN BURUK PARA TIM OFFICIAL (<em>MANAGER</em>ATAU PELATIH)
+	    <ul>
+	      <li>1 Tindakan tata tertib diberikan kepada<em>Tim Official</em>karena:</li>
+	    </ul>
+	  </li>
+
+	  <li>Melanggar tata tertib dan peraturan permainan</li>
+
+	  <li>Mendukung tindakan pemainnya yang melanggar tata tertib dan peraturan permainan</li>
+
+	  <li>Menganggu jalannya permainan</li>
+
+	  <li>UMUM</li>
+	</ol>
+
+	<p>Wasit yang memimpin pertandingan bersama&nbsp;<em>Official Referee</em>&nbsp;akan menggunakan kebijaksanaannya untuk menyelesaikan masalah yang belum tercantum dalam peraturan ini. Keputusan&nbsp;<em>Official Referee</em>&nbsp;adalah mutlak (tidak dapat diganggu gugat)</p>
+  <p><em>Sumber: pedoman peraturan permainan dan pertandingan PB PSTI</em></p>
+		</div>
+
+	</div>
+</body>
+
+</html>
